@@ -284,12 +284,12 @@ export default function SignIn(props) {
                                     </div>
                                     <button type="submit" className="btn btn-primary" onClick={signin}>
                                         <Bars
-                                            height="80"
-                                            width="80"
-                                            color="#4fa94d"
+                                            height="25"
+                                            width="25"
+                                            color="#ffffff"
                                             ariaLabel="bars-loading"
-                                            wrapperStyle={{}}
-                                            wrapperClass=""
+                                            wrapperStyle={{ marginLeft: "45%" }}
+                                            wrapperClassName=""
                                             visible={spinner}
                                         />{!spinner ? "Login" : ""}</button>
                                     <div id="forgot" className="mt-2">

@@ -1,0 +1,73 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(219, 215, 213, 0.5);
+    border-radius: 10px;
+    margin-top: 1.25%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.navbar-right button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 15px;
+}
+
+.navbar-right button:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.logout {
+    background-color: rgba(33, 43, 54, 0.75) !important;
+}
+
+.logout:hover {
+    filter: brightness(200%);
+}
+
+.navbar-left h5 {
+    margin: 0;
+    color: white;
+    margin-left: 15px;
+    animation: colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+    0% {
+        color: rgb(218, 228, 234);
+    }
+
+    25% {
+        color: #90b0cc;
+    }
+
+    50% {
+        color: #3677b4;
+    }
+
+    75% {
+        color: #1e66aa;
+    }
+
+    100% {
+        color: #0c4880;
+    }
+}
+
+.navbar-left h5:hover {
+    animation-play-state: running;
+}
+
+.navbar-left h5:not(:hover) {
+    animation-play-state: paused;
+    color: white !important;
+}

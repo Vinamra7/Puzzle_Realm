@@ -20,3 +20,10 @@
   color: #ffffff;
   background-color: #64a5c4;
 }
+
+.App {
+  background-image: url('./assets/images/home_bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}

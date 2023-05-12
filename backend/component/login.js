@@ -75,7 +75,7 @@ module.exports.login = (req, res) => {
             bcrypt.compare(password, hash, function (err, reso) {
                 console.log("res", reso)
                 if (reso === true) {
-                    const user = { email, password: hash }
+                    const user = { email, password: hash, name: result[0].name }
                     let token = jwt.sign({ user }, "myKey");
                     res.send({ message: "Login Successfull", user: user, token: token })
                 }

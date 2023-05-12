@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+.typer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 25%;
+    margin-left: 5%;
+    font-family: 'Rowdies', cursive;
+}
+
+.go {
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.go:hover {
+    background-color: rgba(33, 43, 54, 0.75);
+    color: whitesmoke;
+}
