@@ -1,0 +1,12 @@
+-- SQLBook: Code
+-- Active: 1683778929558@@aws.connect.psdb.cloud@3306@puzzle_sol
+create table user(
+    email varchar(250),
+    password text,
+    name text,
+    stage_cleared int,
+    primary key(email)
+);
+-- SQLBook: Code
+-- Active: 1683778929558@@aws.connect.psdb.cloud@3306@puzzle_sol
+select * from user;
