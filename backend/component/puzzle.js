@@ -34,10 +34,10 @@ module.exports.start = (req, res) => {
                     return;
                 }
 
-                res.send({ message: `Start time for question ${questionNumber} updated` });
+                res.send({ message: `Start time for question ${questionNumber} Recorded` });
             });
         } else {
-            res.send({ message: `Start time for question ${questionNumber} already set` });
+            res.send({ message: `Start time for question ${questionNumber} already Recorded` });
         }
     });
 }

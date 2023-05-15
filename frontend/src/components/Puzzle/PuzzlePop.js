@@ -56,7 +56,7 @@ const PuzzlePop = (props) => {
         axios.post(`${process.env.REACT_APP_SERVER_URL}/end`, { email, questionNumber })
             .then(response => {
                 if (response.data.message === 'ok') {
-                    toast.success('Submitted', tstyle)
+                    toast.success('Correct Answer', tstyle)
                     setTimeout(() => {
                         alert(data.next)
                         window.location.reload();
@@ -90,7 +90,7 @@ const PuzzlePop = (props) => {
                     <h3>{Start ? 'Start' : ''} {props.casee}</h3>
                     <hr />
                     {!Start && <h5>{data.question}</h5>}
-                    {(!Start && data.extra !== null) && <img className='imgo' src={data.extra} />}
+                    {(!Start && data.extra !== null) && <img className='imgo' src={data.extra} alt='Hint Image' />}
 
                     {!Start && <input class="form-control form-control-sm" type="text" placeholder="Your Response" onChange={ansChange} />}
                     <button className='btn go_puz' onClick={Start ? handleStart : () => { handleSubmit(answer) }}>{Start ? 'Start' : 'Submit'}</button>
