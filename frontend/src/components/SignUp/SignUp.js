@@ -23,7 +23,6 @@ export default function SignUp() {
         if (localStorage.getItem('user')) {
             navigate('/');
         }
-        document.title = 'Sign Up| Space';
         // eslint-disable-next-line
     }, []);
     const handleChange = e => {

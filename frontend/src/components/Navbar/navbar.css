@@ -11,6 +11,7 @@
     margin-top: 1.25%;
     margin-left: 5%;
     margin-right: 5%;
+    z-index: 9999;
 }
 
 .navbar-right button {

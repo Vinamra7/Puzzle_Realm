@@ -1,0 +1,61 @@
+.card {
+    width: 250px;
+    /* Adjust this value to make the images smaller */
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(57, 75, 87, 0.6);
+}
+
+
+
+.green::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.card img {
+    margin-left: 2.5%;
+    margin-top: 5%;
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.card-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+@media (min-width: 960px) {
+    .cards-container {
+        width: 810px;
+        /* Adjust this value to change the spacing between the images in the second row */
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card.disabled {
+    /* styles for disabled cards */
+    pointer-events: none;
+    opacity: 0.5;
+}

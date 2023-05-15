@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 //import home_bg from '../../assets/images/home_bg.png'
 import './home.css'
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom'
 
 //#a18473
 function Home(props) {
@@ -29,7 +30,7 @@ function Home(props) {
                     />
                 </span>
                 <div></div>
-                <button type="button" class="btn go">Let's go!!</button>
+                <Link type="button" class="btn go" to="/puzzle">Let's go!!</Link>
             </div>
         </div>
     )

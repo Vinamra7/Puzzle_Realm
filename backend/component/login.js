@@ -73,7 +73,6 @@ module.exports.login = (req, res) => {
             //console.log("rememe", result[0].password, password)
             var hash = result[0].password
             bcrypt.compare(password, hash, function (err, reso) {
-                console.log("res", reso)
                 if (reso === true) {
                     const user = { email, password: hash, name: result[0].name }
                     let token = jwt.sign({ user }, "myKey");
@@ -91,42 +90,65 @@ module.exports.login = (req, res) => {
         if (err) console.log(err)
     })
 }
+
 module.exports.signUp = async (req, res) => {
     try {
-        const { name, email, password } = req.body
-        var hashedPassword = ""
-        //console.log("huehue", name, email, password)
+        const { name, email, password } = req.body;
+        var hashedPassword = "";
         bcrypt.genSalt(10, function (err, salt) {
             bcrypt.hash(password, salt, function (err, hash) {
-                if (err) console.log(err)
-                else hashedPassword = hash
+                if (err) console.log(err);
+                else hashedPassword = hash;
             });
         });
-        const sql = `select * from user where email = ?`
-        const values = [email]
+        const sql = `select * from user where email = ?`;
+        const values = [email];
         connection.query(sql, values, function (err, result) {
-            //console.log(values, result)
             if (result.length != 0)
-                res.send({ message: 'User already registered' });
+                res.send({ message: "User already registered" });
             else {
-                connection.query(
-                    'insert into user (email, password, name) values(?,?,?)',
-                    [email, hashedPassword, name], (error, results, feilds) => {
-                        if (error) {
-                            console.log(error)
-                            res.send({ error })
-                            return
-                        }
-                        //console.log(name, email, password)
-                        res.send({ message: 'User registered successfully!' })
+                connection.beginTransaction(function (err) {
+                    if (err) {
+                        throw err;
                     }
-                )
+                    connection.query(
+                        "insert into user (email, password, name) values(?,?,?)",
+                        [email, hashedPassword, name],
+                        (error, results, feilds) => {
+                            if (error) {
+                                return connection.rollback(function () {
+                                    throw error;
+                                });
+                            }
+                            connection.query(
+                                "insert into solve (email, name) values(?,?)",
+                                [email, name],
+                                (error, results, feilds) => {
+                                    if (error) {
+                                        return connection.rollback(function () {
+                                            throw error;
+                                        });
+                                    }
+                                    connection.commit(function (err) {
+                                        if (err) {
+                                            return connection.rollback(function () {
+                                                throw err;
+                                            });
+                                        }
+                                        res.send({ message: "User registered successfully!" });
+                                    });
+                                }
+                            );
+                        }
+                    );
+                });
             }
-        })
+        });
     } catch (err) {
         console.log(err);
     }
-}
+};
+
 
 module.exports.code = async (req, res) => {
 

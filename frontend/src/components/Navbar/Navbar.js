@@ -1,11 +1,16 @@
 import React from 'react';
 import './navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = (props) => {
+    const navigate = useNavigate();
     const logout = () => {
         props.setLoginUser(null);
         localStorage.removeItem('user');
         localStorage.removeItem('userMain');
+    }
+    const admin = () => {
+        navigate('/admin')
     }
     return (
         <nav>
@@ -15,7 +20,7 @@ const Navbar = (props) => {
                 </div>
                 <div className="navbar-right">
                     <button>About</button>
-                    <button>Admin</button>
+                    <button onClick={admin}>Admin</button>
                     <button onClick={logout} className='logout'>Logout</button>
                 </div>
             </div>

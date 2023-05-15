@@ -10,3 +10,28 @@ create table user(
 -- SQLBook: Code
 -- Active: 1683778929558@@aws.connect.psdb.cloud@3306@puzzle_sol
 select * from user;
+-- SQLBook: Code
+-- Active: 1683778929558@@aws.connect.psdb.cloud@3306@puzzle_sol
+create table solve(
+    email varchar(250),
+    name text,
+    q1 boolean not null default 0,
+    start_q1 datetime,
+    end_q1 datetime,
+    q2 boolean not null default 0 ,
+    start_q2 datetime,
+    end_q2 datetime,
+    q3 boolean not null default 0 ,
+    start_q3 datetime,
+    end_q3 datetime,
+    q4 boolean not null default 0 ,
+    start_q4 datetime,
+    end_q4 datetime,
+    q5 boolean not null default 0 ,
+    start_q5 datetime,
+    end_q5 datetime,
+    primary key(email)
+)
+-- SQLBook: Code
+-- Active: 1683778929558@@aws.connect.psdb.cloud@3306@puzzle_sol
+select * from solve
