@@ -20,31 +20,32 @@ const PuzzleHome = () => {
     var navigate = useNavigate();
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('userMain'));
-        const email = user.email
-        axios.post(`${process.env.REACT_APP_SERVER_URL}/pull`, { email })
-            .then(response => {
-                const x = response.data
-                console.log(x)
-                setGreen(prevArray => {
-                    const newArray = [...prevArray];
-                    let i = 1;
-                    while ((i <= 5 && x[`q${i}`] === 1)) {
-                        newArray[(i - 1)] = 1; i++;
-                    }
-                    return newArray;
+        if (user !== null && user.email) {
+            const email = user.email
+            axios.post(`${process.env.REACT_APP_SERVER_URL}/pull`, { email })
+                .then(response => {
+                    const x = response.data
+                    console.log(x)
+                    setGreen(prevArray => {
+                        const newArray = [...prevArray];
+                        let i = 1;
+                        while ((i <= 5 && x[`q${i}`] === 1)) {
+                            newArray[(i - 1)] = 1; i++;
+                        }
+                        return newArray;
+                    })
+                    console.log(green)
+                    setq_a(prevArray => {
+                        const newArray = [...prevArray];
+                        let i = 1;
+                        do {
+                            newArray[(i - 1) % 5] = 1;
+                        } while ((i <= 5 && x[`q${i++}`] === 1))
+                        return newArray;
+                    });
                 })
-                console.log(green)
-                setq_a(prevArray => {
-                    const newArray = [...prevArray];
-                    let i = 1;
-                    do {
-                        newArray[(i - 1) % 5] = 1;
-                    } while ((i <= 5 && x[`q${i++}`] === 1))
-                    return newArray;
-                });
-            })
-            .catch(err => { })
-        if (user && user.email) { }
+                .catch(err => { })
+        }
         else navigate('/login')
     }, [])
     const user = JSON.parse(localStorage.getItem('userMain'));

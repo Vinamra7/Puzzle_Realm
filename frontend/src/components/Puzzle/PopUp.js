@@ -18,7 +18,7 @@ const Popup = (props) => {
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
-                        backgroundColor: 'rgba(57, 75, 87,0.6)',
+                        backgroundColor: 'rgba(3,96,111,0.9)',
                         color: 'white',
                         padding: '20px',
                         textAlign: 'center',

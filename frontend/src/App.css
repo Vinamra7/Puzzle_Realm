@@ -24,6 +24,5 @@
 .App {
   background-image: url('./assets/images/home_bg.png');
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
 }

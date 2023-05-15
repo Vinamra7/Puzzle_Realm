@@ -1,4 +1,23 @@
 .admin_main {
+    background-image: url('../../assets/images/admin_back.png');
     padding-top: 5%;
     color: white;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+}
+
+.admin_h {
+    margin-left: 3%;
+}
+
+.card_admin {
+    cursor: pointer;
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: rgba(68, 112, 148, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }

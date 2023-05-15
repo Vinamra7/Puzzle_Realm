@@ -2,7 +2,10 @@
 
     padding-top: 6%;
     display: flex;
+    background-image: url('../../assets/images/image.png');
 
+    background-size: cover;
+    height: 100vh;
     justify-content: center;
 }
 
@@ -21,6 +24,7 @@
     z-index: 9999;
 
 }
+
 
 .closer {
     height: 30px;
