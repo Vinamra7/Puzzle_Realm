@@ -36,7 +36,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#features">Features Checklist</a></li>
+    <li><a href="#Puzzle-Solution">Puzzle Solution</a></li>
     <li><a href="#my">My details</a></li>
   </ol>
 </details>
@@ -98,4 +98,149 @@ Technologies used -
     * Proficient written and verbal communication skills can enhance the puzzle-solving experience and showcase strong soft skills.
 
     <p align="right">(<a href="#top">Back to top</a>)</p>
+<!-- GETTING STARTED -->
 
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+
+
+1. Clone the repo
+   ```sh
+   https://github.com/Vinamra7/Puzzle_Realm.git
+   ```
+#### For Client
+1. Install NPM packages
+   ```sh
+   npm install
+   ```
+2. Create a .env file and add following data - 
+   ```sh
+   REACT_APP_SERVER_URL="SERVER_URL"
+   ```
+3. To run the frontend -
+   ```sh 
+   npm run start
+   ```
+#### For Server
+1. Install NPM packages
+   ```sh
+   npm install
+   ```
+2. Create a .env file and add following data - 
+   ```sh
+    sql_host = "MYSQL_HOST_NAME"
+    sql_user = "MYSQL_USERNAME"
+    sql_password = "MYSQL_PASSWORD"
+    sql_database = "MYSQL_Database_NAME"
+    ```
+3. To run the backend -
+   ```sh 
+   nodemon index.js
+   ```
+   
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Puzzle Solution
+
+### Puzzle 1
+
+* Clue 1 Presents a riddle to the user 
+#### question
+* "I have keys but no locks, space but no room. You can enter, but can't go outside. What am I?"
+#### answer keyboard
+
+<img src='./gifs/q1.png' alt='question 1' width="50%" height="50%"></img>
+
+* User is presented A connected Hint of Puzzle 2
+
+<img src='./gifs/q1_hint.png' alt='q1_hint' width="30%" height="30%"/>
+
+* The connecting hint routes to pasteBin which contains a hint to install python library IMAGEHIDE for next puzzle
+
+<img src='./gifs/q11_hint.png' alt='q1_hint2' width="30%" height="30%"/>
+
+* Install the library required for the next puzzle
+```sh
+    pip install imagehide
+```
+### Puzzle 2
+
+* Puzzle 2 presents a QR code to the user
+<br/>
+<img src='./gifs/q2.png' alt='q2' width="50%" height="50%"/>
+
+#### DeadEnd 1
+* The QR code is a dead end and leads to a dead end page
+<br/>
+<img src="./gifs/dead_end.png" width="50%" height="50%"/>
+
+* The Puzzle's solution is hidden in medta_data of the QR code user can download the QR code and use it in ImageHide library to extract the solution
+```sh
+    import imagehide
+```
+#### Solution of Puzzle 2
+* xc6oq1
+
+* User is presented with connecting hint to Puzzle 3
+<br/>
+<img src="./gifs/q2_hint.png" width="30%" height="30%"/>
+
+### Puzzle 3
+
+* Puzzle 3 presents a Dead PasteBin link to the user
+<br/>
+<img src="./gifs/time457.png"/>
+
+#### DeadEnd 2
+* The PasteBin link is a dead end and leads to a dead end page
+<br/>
+<img src="./gifs/not_found.png" width="30%" height="30%"/>
+
+* To get the Solution user show now think about the connection hint 2
+* which was to check the !!PAST!!
+
+#### Solution of Puzzle 3
+* User can use WAYBACK MACHINE to check the PAST screenshot of the dead pastebin link
+
+<img src='./gifs/past.png' width="60%" height="60%"/>
+
+#### answer 
+* "time457"
+
+* User is presented with connecting hint to Puzzle 4
+
+<img src="./gifs/q3_hint.png" width="30%" height="30%"/>
+
+### Puzzle 4
+* Puzzle 4 is a random Paragraph which is the input for the code given in connecting hint 3
+
+<img src="./gifs/ideone.png"/>
+<br/>
+* Provide the entire paragraph as input to the code given in connecting hint 3
+
+#### Solution of Puzzle 4
+* EhfiefmabandIfvwglpahfiydmcpybwtenintfpNocahdiyphbicahpeoymhaowMsctydsacwfopoaryiosaufchasioyohaqol
+
+### Puzzle 5
+* Puzzle 5 is a riddle "The URL to the fourth face inside a book reveals the creator."
+
+#### Solution of Puzzle 5
+<a href="www.facebook.com/4">www.facebook.com/4</a> reveals the profile of Mark Zuckerberg (creator of facebook)
+
+<img src="./gifs/q5_answer.jpeg"/>
+
+#### answer
+* mark zuckerberg
