@@ -13,6 +13,7 @@
     <br />
     <a href="https://main--charming-pavlova-e13b74.netlify.app/">Live Website</a>
   </h3>
+  <i>Please note that the server is hosted on the free tier of the Render app. As a result, there may be occasional delays in receiving a response. In such cases, I kindly request that you refresh the page and try again.</i>
 </div>
 
 <br/>
@@ -25,7 +26,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Tech Stack</a></li>
+        <li><a href="#built-with">Tech Stack</a>
+        <ul>
+            <li><a href="#tech-used">Tech Used</a></li>
+        </ul>  
+    </li>
       </ul>
     </li>
     <li><a href="#soft-skills">Soft Skills</a></li>
@@ -37,7 +42,8 @@
       </ul>
     </li>
     <li><a href="#Puzzle-Solution">Puzzle Solution</a></li>
-    <li><a href="#my">My details</a></li>
+    <li><a href="#features-checklist">Features CheckList</a></li>
+    <li><a href="#my-details">My details</a></li>
   </ol>
 </details>
 
@@ -49,7 +55,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<h3>Home Page</h3>
 <img src = './gifs/home_.png' alt = "Home" >
+<h3>Puzzle Page</h3>
+<img src = './gifs/puzzle.png' alt = "Puzzle" >
+<h3>Admin Page</h3>
+<img src = './gifs/admin_.png' alt = "Admin" >
 
 Puzzle Realm, a new way to challenge your mind! Puzzle Realm is the best online platform to test your puzzle-solving skills and embark on a treasure hunt adventure.
 
@@ -79,6 +90,18 @@ Technologies used -
 </p>
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
+
+## Tech Used
+| Tech Used | |
+| --- | --- |
+| [React JS](https://react.dev/) | Frontend |
+| [Node JS](https://nodejs.org/) | Backend |
+| [Express JS](https://expressjs.com/) | Server Route |
+| [PlanetScale](https://planetscale.com/) | MySQL Server |
+| [NodeMailer](https://nodemailer.com/) | Email verification |
+| [Blue Willow](https://www.bluewillow.ai/) + [Stable Diffusion](https://playgroundai.com/create) | AI Image Generator |
+| [Netlify](https://netlify.com/) | FrontEnd Host |
+| [Render](https://render.com/) | Backend Host |
 
 
 <!-- Soft Skills-->
@@ -244,3 +267,30 @@ This is an example of how to list things you need to use the software and how to
 
 #### answer
 * mark zuckerberg
+
+# Features Checklist
+
+- <input type="checkbox" checked> Login and Register page
+- <input type="checkbox" checked> Secure Password Storage
+- <input type="checkbox" checked> 5 Clues 2 Dead ends
+- <input type="checkbox" checked> Progress storage when refresh
+- <input type="checkbox" checked> Admin page
+- <input type="checkbox" > Secured Admin page
+- <input type="checkbox" checked> Soft Skill Testing
+- <input type="checkbox" checked> Connecting Hints
+
+### Project status
+
+- <input type="checkbox" checked> Design
+- <input type="checkbox" checked> Mockups
+- <input type="checkbox" checked> Development
+- <input type="checkbox" checked> Unit testing
+- <input type="checkbox"> QA
+- <input type="checkbox"> Stage
+- <input type="checkbox"> Beta Testing
+- <input type="checkbox" checked> Production
+
+# my Details
+
+- **Name**: Vinamra Mishra
+    * [Vinamra Mishra](https://github.com/Vinamra7)
